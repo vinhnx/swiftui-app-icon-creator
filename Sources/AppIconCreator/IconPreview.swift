@@ -11,11 +11,11 @@ public struct IconPreview<Icon: View>: View {
 
   public var body: some View {
     VStack(alignment: .leading, spacing: 16) {
-      Text(config.id).font(.title2)
+      Text(config.id).font(.title)
       HStack(alignment: .top, spacing: 16) {
         ForEach(config.scales.sorted(by: >), id: \.self) { scale in
           VStack(alignment: .center, spacing: 8) {
-            Text("\(scale)x").font(.title3)
+            Text("\(scale)x").font(.title)
             iconView(size: config.size, scale: scale)
           }
         }
